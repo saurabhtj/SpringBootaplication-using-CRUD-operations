@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>View Students</title>
+</head>
+
+<body>
+
+<h1>Student Records</h1>
+
+<table border="1">
+
+<tr>
+<th>Roll No</th>
+<th>Name</th>
+<th>City</th>
+</tr>
+
+<tr th:each="s : ${data}" th:if="${s != null}">
+
+<td th:text="${s.rollno}"></td>
+<td th:text="${s.name}"></td>
+<td th:text="${s.city}"></td>
+
+</tr>
+
+</table>
+
+<br>
+
+<a href="/addstudent2.html">Add</a>
+
+<br><br>
+
+<a href="/searchstudent2.html">Search</a>
+
+<br><br>
+
+<a href="/updatestudent2.html">Update</a>
+
+<br><br>
+
+<a href="/deletestudent2.html">Delete</a>
+
+</body>
+</html>
