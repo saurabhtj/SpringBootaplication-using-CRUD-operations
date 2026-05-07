@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<title>Search Result</title>
+</head>
+
+<body>
+
+<h1>Search Result</h1>
+
+<div th:if="${s != null}">
+
+Roll No:
+<span th:text="${s.rollno}"></span>
+
+<br><br>
+
+Name:
+<span th:text="${s.name}"></span>
+
+<br><br>
+
+City:
+<span th:text="${s.city}"></span>
+
+</div>
+
+<div th:if="${msg != null}">
+
+<h2 th:text="${msg}"></h2>
+
+</div>
+
+</body>
+</html>
